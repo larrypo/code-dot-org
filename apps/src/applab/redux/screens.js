@@ -1,6 +1,7 @@
 import Immutable from 'immutable';
 
 const CHANGE_SCREEN = 'screens/CHANGE_SCREEN';
+const TOGGLE_IMPORT_SCREEN = 'screens/TOGGLE_IMPORT_SCREEN';
 
 const initialState = Immutable.Record({
   currentScreenId: null
@@ -9,6 +10,8 @@ const initialState = Immutable.Record({
 export default function (state = initialState, action) {
   if (action.type === CHANGE_SCREEN) {
     return state.set('currentScreenId', action.screenId);
+  } else if (action.type === TOGGLE_IMPORT_SCREEN) {
+    return state.set('importingScreen', action.importing);
   }
   return state;
 }
@@ -23,4 +26,14 @@ export default function (state = initialState, action) {
 export const changeScreen = screenId => ({
   type: CHANGE_SCREEN,
   screenId
+});
+
+/**
+ * Change the state of whether we are importing a screen or not.
+ * @param {!bool} importing
+ * @returns {{type: ActionType, importing: bool}}
+ */
+export const toggleImportScreen = (importing) => ({
+  type: TOGGLE_IMPORT_SCREEN,
+  importing,
 });
