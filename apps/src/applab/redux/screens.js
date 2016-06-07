@@ -3,10 +3,12 @@ import Immutable from 'immutable';
 const CHANGE_SCREEN = 'screens/CHANGE_SCREEN';
 const TOGGLE_IMPORT_SCREEN = 'screens/TOGGLE_IMPORT_SCREEN';
 
-const initialState = Immutable.Record({
+var ScreenState = Immutable.Record({
   currentScreenId: null,
   isImportingScreen: false,
 });
+
+const initialState = new ScreenState();
 
 export default function (state = initialState, action) {
   if (action.type === CHANGE_SCREEN) {
