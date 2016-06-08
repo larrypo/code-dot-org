@@ -5,7 +5,8 @@
 module.exports = {
   animations: clientApi('animations'),
   assets: clientApi('assets'),
-  sources: clientApi('sources')
+  sources: clientApi('sources'),
+  channels: clientApi('channels'),
 };
 
 function clientApi(endpoint) {
