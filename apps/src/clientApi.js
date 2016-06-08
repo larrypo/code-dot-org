@@ -10,8 +10,13 @@ module.exports = {
 
 function clientApi(endpoint) {
   return {
+    setProjectId(projectId) {
+      this.projectId = projectId;
+      return this;
+    },
     basePath: function (path) {
-      return '/v3/' + endpoint + '/' + dashboard.project.getCurrentId() + (path ? '/' + path : '');
+      var projectId = this.projectId || dashboard.project.getCurrentId();
+      return '/v3/' + endpoint + '/' + projectId + (path ? '/' + path : '');
     },
     ajax: function (method, file, success, error, data) {
       error = error || function () {};
