@@ -53,6 +53,13 @@ module.exports = function (config) {
         "playground-io": "var PlaygroundIO",
         "chrome-serialport": "var ChromeSerialport",
         "blockly": "this Blockly",
+
+        // The below are necessary for enzyme to work.
+        // See https://github.com/airbnb/enzyme/blob/master/docs/guides/webpack.md
+        "cheerio": "window",
+        "react/addons": true,
+        "react/lib/ExecutionEnvironment": true,
+        "react/lib/ReactContext": true
       },
       plugins: [
         new webpack.ProvidePlugin({React: 'react'}),
