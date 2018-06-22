@@ -15,8 +15,8 @@ Upgrade your MySQL server and retry the migration."
     end
 
     alter_table(:forms) do
-      set_column_type :data, :JSON
-      set_column_type :processed_data, :JSON
+      #set_column_type :data, :JSON
+      #set_column_type :processed_data, :JSON
     end
   end
 

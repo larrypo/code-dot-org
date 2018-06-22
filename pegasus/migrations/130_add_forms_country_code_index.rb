@@ -12,8 +12,8 @@ Upgrade your MySQL server to >= 5.7.13 and retry the migration."
 
     alter_table(:forms) do
       add_column :location_country_code_s,
-        String, size: 2, fixed: true,
-        generated_always_as: Sequel.lit('processed_data->>"$.location_country_code_s"')
+        String, size: 2, fixed: true #,
+        # generated_always_as: Sequel.lit('processed_data->>"$.location_country_code_s"')
       add_index [:kind, :location_country_code_s]
     end
   end
