@@ -163,7 +163,7 @@
     top: 55px;
     right: 55px;
     background-color: $white;
-    width: 260px;
+    min-width: 260px;
     z-index: 10000;
     a {
       color: $teal;
@@ -185,12 +185,13 @@
     img {
       height: 70px;
       width: 70px;
-      float: left;
+    }
+    .project_link_box {
+      display: block;
     }
     .project_link {
       padding-left: 10px;
       line-height: 70px;
-      float: left;
     }
     #view_all_projects {
       height: 70px;
