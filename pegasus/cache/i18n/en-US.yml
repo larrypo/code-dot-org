@@ -1524,7 +1524,7 @@
   user_header_logout: "Sign out"
   user_header_signin: "Sign in"
   user_header_create: 'Create '
-  user_header_applab: 'App Lab '
+  user_header_applab: 'Applications Laboratory '
   user_header_artist: 'Artist '
   user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
