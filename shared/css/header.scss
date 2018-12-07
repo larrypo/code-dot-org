@@ -163,13 +163,13 @@
     top: 55px;
     right: 55px;
     background-color: $white;
-    min-width: 260px;
     z-index: 10000;
     border: 1px solid $charcoal;
+    border-bottom: 0;
     a {
       color: $teal;
       font-family: 'Gotham 5r', sans-serif;
-      width: 258px;
+      width: 100%;
       font-size: 14px;
       float: left;
       border-bottom: 1px solid $charcoal;
@@ -191,11 +191,12 @@
     }
     .project_link {
       display: inline-block;
-      padding: 0 10px 0 5px;
+      padding: 0 10px 0 4px;
       line-height: 67px;
     }
     #view_all_projects {
       height: 70px;
+      padding-left: 10px;
     }
   }
 
@@ -220,12 +221,12 @@
 
 #language_dir.rtl #pageheader-wrapper {
   .create_options {
-    img {
-      float: right;
-    }
+    direction: rtl;
     .project_link {
+      padding: 0 4px 0 10px;
+    }
+    #view_all_projects {
       padding-right: 10px;
-      float: right;
     }
   }
 }
